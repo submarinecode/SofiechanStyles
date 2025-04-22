@@ -29,7 +29,7 @@ Install the Stylus extension for your browser:
 5. In the "Applies to" section, select "URLs on the domain" and enter: `sofiechan.com`
 7. Click "Save"
 
-## Preview
+## Previews
 
 ### Japanese Train Station Theme
 ![Train Station Theme Preview](preview-train.png)
