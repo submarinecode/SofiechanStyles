@@ -1,0 +1,135 @@
+/*Coffee Theme for Sofiechan*/
+
+/* Force dark mode regardless of system preference */
+:root {
+  /* Core Colors */
+  --bg: #1a1a1a;
+  --fg: #e0e0e0;
+  --accent: #ccb98d;
+  --highlight: #d4c5a3;
+  --shadow: #000000;
+  --bgmain: #2e2217;
+  --bgtext: #3a2b20;
+  --bgtarget: #4d3a2a;
+  --fgtext: #e7d7c5;
+  --fggrey: #aa8a77;
+  --pink: #e7c5a5;
+  --green: #b7a97a;
+}
+
+body {
+  font-family: Georgia, serif !important;
+  background-color: var(--bgmain) !important;
+  color: var(--fgtext) !important;
+}
+/* Threads */
+article {
+  background-color: var(--bgtext) !important;
+  border: 2px solid #7c5e3c !important;
+  border-radius: 12px !important;
+  padding: 16px !important;
+  margin-bottom: 20px !important;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.4) !important;
+}
+/* Titles */
+.linktitle {
+  color: #f0dab1 !important;
+  font-weight: bold !important;
+  font-size: 1.2em !important;
+}
+/* Previews */
+.preview {
+  color: #cbb8a2 !important;
+  font-size: 0.95em !important;
+  margin-top: 0.2em !important;
+}
+
+/* New thread button */
+a[href="/compose"] {
+  background: #6a4c2c !important;
+  color: #f6e4c9 !important;
+  padding: 6px 12px !important;
+  margin: 10px 0 !important;
+  border-radius: 8px !important;
+  box-shadow: inset 0 1px 2px #a07b4a, 0 2px 4px rgba(0,0,0,0.4) !important;
+}
+/* General UI text buttons */
+button.textbtn {
+  background: none !important;
+  border: none !important;
+  color: var(--fggrey) !important;
+  font-size: 0.85em !important;
+  cursor: pointer !important;
+}
+.options {
+  color: var(--fggrey) !important;
+  font-size: 0.8em !important;
+}
+
+
+/* Force theme */
+html[data-theme="light"] {
+  filter: none !important;
+}
+
+/* Text inputs and form elements */
+input, textarea, select {
+  background-color: var(--bgtarget) !important;
+  color: var(--fgtext) !important;
+  border: 1px solid #7a5c3e !important;
+}
+
+/* Choose file button */
+.fakebutton {
+  background-color: #6a4c2c !important;
+  color: #f6e4c9 !important;
+  border: 1px solid #7a5c3e !important;
+  border-radius: 4px !important;
+  font-family: Georgia, serif !important;
+}
+
+/* Post button */
+button.post,
+button[type="submit"] {
+  background-color: #6a4c2c !important;
+  color: #f6e4c9 !important;
+  border: 1px solid #7a5c3e !important;
+  font-family: Georgia, serif !important;
+  border-radius: 4px !important;
+}
+
+/* Category links */
+.linktitle a, [href^="/"] {
+  color: #e7c5a5 !important;
+}
+
+/* Tag button styling - but not vote buttons */
+.textbtn:not(.votebtn) {
+  color: var(--fggrey) !important;
+  background: none !important;
+}
+
+/* Ensure all headers and text are visible */
+h1, h2, h3, h4, h5, h6 {
+  color: #f0dab1 !important;
+}
+
+/* Additional elements that might need dark mode styling */
+#mySVG {
+  background: transparent !important;
+}
+
+#mySVG circle {
+  stroke: var(--fggrey) !important;
+}
+
+/* Channel name and tags */
+h1 {
+  color: #f0dab1 !important;
+}
+
+/* Ensure base HTML elements follow the theme */
+html, body, div, main, aside, header, footer {
+  background-color: var(--bgmain) !important;
+  color: var(--fgtext) !important;
+}

@@ -128,16 +128,6 @@
     margin-top: 10px !important;
   }
   
-  /* Vote buttons */
-  .votebuttons a {
-    color: var(--accent) !important;
-  }
-  
-  .votebuttons a svg {
-    width: 18px !important;
-    height: 18px !important;
-    vertical-align: middle !important;
-  }
   
   /* Post metadata like arrival time display */
   .options {
@@ -253,48 +243,6 @@
   
   #mySVG:hover circle:nth-child(5) {
     stroke-width: 4 !important;
-  }
-  
-  /* Vote buttons - clicking states - multiple attempts to target them */
-  /* Upvotes */
-  .votebuttons a.voted,
-  .votebuttons a[data-voted="true"],
-  .votebuttons a[aria-pressed="true"],
-  .votebuttons a.upvoted,
-  .votebuttons a.active,
-  .votebuttons a.selected,
-  .votebuttons a:first-child:active {
-    color: var(--highlight) !important;
-  }
-  
-  /* Downvotes */
-  .votebuttons a.voted-down,
-  .votebuttons a[data-voted-down="true"],
-  .votebuttons a.downvoted,
-  .votebuttons a.down.active,
-  .votebuttons a.down.selected,
-  .votebuttons a:nth-child(2):active {
-    color: var(--accent) !important;
-  }
-  
-  /* SVG fills for voting states */
-  .votebuttons a.voted svg path,
-  .votebuttons a[data-voted="true"] svg path,
-  .votebuttons a[aria-pressed="true"] svg path,
-  .votebuttons a.upvoted svg path,
-  .votebuttons a.active svg path,
-  .votebuttons a.selected svg path,
-  .votebuttons a:first-child:active svg path {
-    fill: var(--highlight) !important;
-  }
-  
-  .votebuttons a.voted-down svg path,
-  .votebuttons a[data-voted-down="true"] svg path,
-  .votebuttons a.downvoted svg path,
-  .votebuttons a.down.active svg path,
-  .votebuttons a.down.selected svg path,
-  .votebuttons a:nth-child(2):active svg path {
-    fill: var(--accent) !important;
   }
   
   /* Force light theme */

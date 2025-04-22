@@ -1,0 +1,341 @@
+/* Paper & Ink Theme for Sofiechan
+ * A theme inspired by traditional paper and fountain pen aesthetics
+ */
+
+/* Force Light Mode */
+:root {
+    /* Override dark mode variables */
+    --bgcolor: #faf6f1 !important;
+    --fgcolor: #2c1810 !important;
+    --bgtext: #faf6f1 !important;
+    --fgtext: #2c1810 !important;
+    --border-color: #d8d4cf !important;
+    --link: #8b4513 !important;
+    --accent: #8b4513 !important;
+}
+
+:root {
+    /* Paper Colors */
+    --paper-bg: #faf6f1;
+    --paper-shadow: #e8e4df;
+    --paper-fold: #f0ece7;
+    --paper-darker: #e5e1dc;
+    
+    /* Ink Colors */
+    --ink-primary: #2c1810;
+    --ink-secondary: #4a3428;
+    --ink-accent: #8b4513;
+    --ink-muted: #6b5b52;
+    --ink-placeholder: #8a7a73;
+    
+    /* UI Elements */
+    --border-color: #d8d4cf;
+    --hover-bg: #f5f1ec;
+    --selected-bg: #ebe7e2;
+    
+    /* Shadows */
+    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1);
+    --shadow-md: 0 2px 5px rgba(0, 0, 0, 0.08);
+    --shadow-lg: 0 4px 8px rgba(0, 0, 0, 0.06);
+}
+
+/* Force light backgrounds on specific elements */
+body, #composeblock, input, textarea, .post, .comment {
+    background-color: var(--paper-bg) !important;
+    color: var(--ink-primary) !important;
+}
+
+/* Base Styles */
+body {
+    background-color: var(--paper-bg);
+    color: var(--ink-primary);
+    font-family: "Crimson Text", Georgia, serif;
+    line-height: 1.6;
+}
+
+/* Paper-like Containers */
+.post, .comment, .card {
+    background-color: var(--paper-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 2px;
+    box-shadow: var(--shadow-sm);
+    padding: 1.5rem;
+    margin: 1rem 0;
+    position: relative;
+}
+
+/* Paper Fold Effect */
+.post::before, .comment::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 20px;
+    height: 20px;
+    background: linear-gradient(135deg, transparent 50%, var(--paper-fold) 50%);
+    box-shadow: var(--shadow-sm);
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Playfair Display", serif;
+    color: var(--ink-secondary);
+    font-weight: 600;
+    letter-spacing: 0.02em;
+}
+
+a {
+    color: var(--ink-accent);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.2s ease;
+}
+
+a:hover {
+    border-bottom-color: var(--ink-accent);
+}
+
+/* Buttons */
+button, .button {
+    background-color: var(--paper-bg);
+    color: var(--ink-primary);
+    border: 1px solid var(--border-color);
+    border-radius: 2px;
+    padding: 0.5rem 1rem;
+    font-family: inherit;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+button:hover, .button:hover {
+    background-color: var(--hover-bg);
+    box-shadow: var(--shadow-sm);
+}
+
+/* Form Elements */
+input, textarea {
+    background-color: var(--paper-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 2px;
+    padding: 0.75rem 1rem;
+    font-family: inherit;
+    color: var(--ink-primary);
+    width: 100%;
+    box-sizing: border-box;
+}
+
+input::placeholder, textarea::placeholder {
+    color: var(--ink-placeholder);
+    font-style: italic;
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    border-color: var(--ink-accent);
+    box-shadow: var(--shadow-sm);
+    background-color: var(--hover-bg);
+}
+
+/* Thread Creation Form */
+#composeblock {
+    background-color: var(--paper-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    padding: 2rem;
+    margin: 1rem 0;
+    box-shadow: var(--shadow-md);
+}
+
+/* Form Inputs */
+input[type="text"], textarea {
+    background-color: var(--paper-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 2px;
+    padding: 0.75rem 1rem;
+    font-family: inherit;
+    color: var(--ink-primary);
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 1rem;
+}
+
+input[type="text"]::placeholder, textarea::placeholder {
+    color: var(--ink-placeholder);
+    font-style: italic;
+}
+
+input[type="text"]:focus, textarea:focus {
+    outline: none;
+    border-color: var(--ink-accent);
+    box-shadow: var(--shadow-sm);
+    background-color: var(--hover-bg);
+}
+
+/* Title Input */
+input[name="title"] {
+    font-family: "Playfair Display", serif;
+    font-size: 1.5rem;
+    padding: 0.5rem 1rem;
+}
+
+/* Link Input */
+#linkinput {
+    font-size: 0.9rem;
+    background-color: var(--paper-darker);
+}
+
+/* Comment Textarea */
+textarea[name="body"] {
+    min-height: 150px;
+    font-size: 1rem;
+    line-height: 1.6;
+    resize: vertical;
+    background-color: var(--paper-bg);
+}
+
+/* Post Button */
+button[type="submit"], input[type="submit"] {
+    background-color: var(--ink-accent);
+    color: var(--paper-bg);
+    border: none;
+    border-radius: 4px;
+    padding: 0.75rem 1.5rem;
+    font-family: "Playfair Display", serif;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    float: right;
+}
+
+button[type="submit"]:hover, input[type="submit"]:hover {
+    background-color: var(--ink-primary);
+    box-shadow: var(--shadow-md);
+}
+
+/* File Upload Button */
+.fakebutton {
+    font-family: unset;
+    font-size: 13px;
+    padding: 0.2em 1em;
+    border-radius: 2px;
+    border: 1px solid var(--border-color);
+    background: var(--paper-darker);
+    color: var(--ink-primary);
+    white-space: nowrap;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.fakebutton:hover {
+    background-color: var(--hover-bg);
+    border-color: var(--ink-accent);
+}
+
+/* Hide the actual file input */
+input[type="file"] {
+    display: none;
+}
+
+/* Anonymous Posting Section */
+.flexspace {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    color: var(--ink-muted);
+    font-style: italic;
+    font-size: 0.9rem;
+}
+
+/* Comment Area */
+.comment-area {
+    min-height: 150px;
+    margin: 1rem 0;
+    font-size: 1rem;
+    line-height: 1.6;
+    resize: vertical;
+}
+
+/* Navigation */
+nav {
+    background-color: var(--paper-bg);
+    border-bottom: 1px solid var(--border-color);
+    box-shadow: var(--shadow-sm);
+}
+
+/* Footer */
+footer {
+    background-color: var(--paper-fold);
+    border-top: 1px solid var(--border-color);
+    color: var(--ink-muted);
+    padding: 2rem 0;
+}
+
+/* Code Blocks */
+pre, code {
+    font-family: "Fira Code", monospace;
+    background-color: var(--paper-fold);
+    border: 1px solid var(--border-color);
+    border-radius: 2px;
+}
+
+/* Quotes */
+blockquote {
+    border-left: 3px solid var(--ink-accent);
+    margin: 1rem 0;
+    padding-left: 1rem;
+    color: var(--ink-secondary);
+    font-style: italic;
+}
+
+/* Tables */
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 1rem 0;
+}
+
+th, td {
+    border: 1px solid var(--border-color);
+    padding: 0.5rem;
+}
+
+th {
+    background-color: var(--paper-fold);
+    color: var(--ink-secondary);
+}
+
+/* Lists */
+ul, ol {
+    padding-left: 1.5rem;
+}
+
+li {
+    margin: 0.5rem 0;
+}
+
+/* Images */
+img {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid var(--border-color);
+    border-radius: 2px;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--paper-fold);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--ink-muted);
+    border-radius: 2px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--ink-accent);
+} 

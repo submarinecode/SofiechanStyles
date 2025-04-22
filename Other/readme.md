@@ -2,13 +2,15 @@
 
 This repository contains custom CSS styles for [sofiechan.com](https://sofiechan.com) that can be applied using the Stylus browser extension.
 
-> **Note:** Like and mute buttons currently do not change color when activated.
-
 ## Styles Included
 
 1. **Japanese Train Station Theme** - A light, clean design inspired by Japanese rail transit signage with distinctive colors from various Tokyo train lines.
 
 2. **Skeuomorphic Dark Theme** - A rich dark theme with textured elements, beveled edges, and a warm color palette reminiscent of wooden textures.
+
+3. **Paper & Ink Theme** - An elegant theme inspired by traditional paper and fountain pen aesthetics, featuring warm paper-like backgrounds and ink-inspired colors.
+
+4. **Minimalist Monochrome Theme** - A clean, high-contrast black and white design with modern typography and subtle gray accents.
 
 ## Installation
 

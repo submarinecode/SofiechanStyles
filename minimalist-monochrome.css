@@ -1,0 +1,222 @@
+/* Minimalist Monochrome Theme for Sofiechan
+ * A clean, high-contrast black and white design
+ */
+
+:root {
+    /* Core Colors */
+    --black: #000000;
+    --white: #ffffff;
+    --gray-100: #f5f5f5;
+    --gray-200: #eeeeee;
+    --gray-300: #e0e0e0;
+    --gray-400: #bdbdbd;
+    --gray-500: #9e9e9e;
+    --gray-600: #757575;
+    --gray-700: #616161;
+    --gray-800: #424242;
+    --gray-900: #212121;
+    
+    /* Accent Colors */
+    --accent: #404040;
+    --accent-light: #616161;
+    --accent-dark: #212121;
+    
+    /* UI Elements */
+    --border-color: var(--gray-300);
+    --hover-bg: var(--gray-100);
+    --selected-bg: var(--gray-200);
+    
+    /* Shadows */
+    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 2px 4px rgba(0, 0, 0, 0.05);
+    --shadow-lg: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* Base Styles */
+body {
+    background-color: var(--white);
+    color: var(--black);
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Containers */
+.post, .comment, .card {
+    background-color: var(--white);
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    padding: 1.5rem;
+    margin: 1rem 0;
+    transition: all 0.2s ease;
+}
+
+.post:hover, .comment:hover, .card:hover {
+    box-shadow: var(--shadow-md);
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+    font-family: inherit;
+    color: var(--black);
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+}
+
+a {
+    color: var(--black);
+    text-decoration: none;
+    border-bottom: 1px solid var(--gray-400);
+    transition: all 0.2s ease;
+}
+
+a:hover {
+    border-bottom-color: var(--black);
+}
+
+/* Buttons */
+button, .button {
+    background-color: var(--white);
+    color: var(--black);
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    padding: 0.5rem 1rem;
+    font-family: inherit;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+button:hover, .button:hover {
+    background-color: var(--hover-bg);
+    border-color: var(--gray-400);
+}
+
+/* Form Elements */
+input, textarea {
+    background-color: var(--white);
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    padding: 0.5rem;
+    font-family: inherit;
+    transition: all 0.2s ease;
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    border-color: var(--black);
+    box-shadow: var(--shadow-sm);
+}
+
+/* Navigation */
+nav {
+    background-color: var(--white);
+    border-bottom: 1px solid var(--border-color);
+    padding: 1rem 0;
+}
+
+/* Footer */
+footer {
+    background-color: var(--gray-100);
+    border-top: 1px solid var(--border-color);
+    color: var(--gray-700);
+    padding: 2rem 0;
+}
+
+/* Code Blocks */
+pre, code {
+    font-family: "JetBrains Mono", monospace;
+    background-color: var(--gray-100);
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    font-size: 0.9em;
+}
+
+/* Quotes */
+blockquote {
+    border-left: 3px solid var(--gray-400);
+    margin: 1rem 0;
+    padding-left: 1rem;
+    color: var(--gray-700);
+}
+
+/* Tables */
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 1rem 0;
+}
+
+th, td {
+    border: 1px solid var(--border-color);
+    padding: 0.75rem;
+}
+
+th {
+    background-color: var(--gray-100);
+    font-weight: 600;
+}
+
+/* Lists */
+ul, ol {
+    padding-left: 1.5rem;
+}
+
+li {
+    margin: 0.5rem 0;
+}
+
+/* Images */
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--gray-100);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--gray-400);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--gray-500);
+}
+
+/* Utility Classes */
+.text-muted {
+    color: var(--gray-600);
+}
+
+.bg-light {
+    background-color: var(--gray-100);
+}
+
+.border {
+    border: 1px solid var(--border-color);
+}
+
+.rounded {
+    border-radius: 4px;
+}
+
+.shadow {
+    box-shadow: var(--shadow-sm);
+}
+
+.shadow-md {
+    box-shadow: var(--shadow-md);
+}
+
+.shadow-lg {
+    box-shadow: var(--shadow-lg);
+} 
